@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-mod-6">
+            <img src="{{product.img.url}}" width="300" height="300">
+        </div>
+<div class="col-md-6">
+    <h6>{{product.name}}</h6>
+     <h4> {{product.desc}}</h4>
+    <h6>{{product.year}}</h6>
+    <a class="btn btn-warning" href="{% url 'productapp:update' product.id %}">update</a>
+    <a class="btn btn-danger" href="{% url 'productapp:delete' product.id %}">delete</a>
+</div>
+    </div>
+
+</div>
+{% endblock %}
